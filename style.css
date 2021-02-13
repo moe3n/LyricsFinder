@@ -1,0 +1,29 @@
+body{
+	background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(171,171,217,1) 0%, rgba(0,172,255,0.9398826979472141) 100%);
+}
+#output{
+    text-align: center;
+    padding: 40px;
+}
+.container{
+	text-decoration: none;
+	text-align: center;
+
+}
+#title{
+	border-radius: 15px;
+
+}
+#artist{
+	border-radius: 15px;
+	text-decoration: none;
+
+}
+button{
+	border-radius: 15px;
+}
+h1{
+	font-size: 2rem;
+
+}

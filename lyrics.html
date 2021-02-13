@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Lyrics Finder</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<body>
+	<div class="container">
+		<h1>Search for lyrics</h1>
+		
+		<input id="title"> by <input id="artist">
+		<button onclick="findlyrics()">Find lyrics</button>
+		<div id="output"></div>
+	</div>
+<script>
+    function findlyrics() {
+        $.get("https://api.lyrics.ovh/v1/" + document.getElementById("artist").value + "/" + document.getElementById("title").value,
+            function (data) {
+                document.getElementById("output").innerHTML = data.lyrics.replace(new RegExp("\n", "g"), "<br>")
+            })
+    }
+</script>
+</body>
